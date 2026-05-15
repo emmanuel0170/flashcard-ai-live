@@ -23,3 +23,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/")
+async def root():
+    return {"status": "success", "message": "FlashCard AI API is live"}
